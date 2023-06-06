@@ -1,0 +1,52 @@
+{
+    "dataset": {
+        "cub": {
+            "classes": {
+                "train":"range(0,100)",
+                "eval": "range(100, 200)"
+            },
+            "source": "str('../datasets/cub200')",
+            "root":"str('../datasets/cub200/CUB_200_2011')"
+        },
+        "aircraft": {
+            "classes": {
+                "train":"range(0,50)",
+                "eval": "range(50, 100)"
+            },
+            "source": "str('../datasets/fgvc-aircraft/fgvc-aircraft-2013b/fgvc-aircraft-2013b/data')",
+            "root":"str('../datasets/fgvc-aircraft/fgvc-aircraft-2013b/fgvc-aircraft-2013b/data/images')"
+        },
+        "cars": {
+            "classes": {
+                "train": "range(0, 98)",
+                "eval": "range(98, 196)"
+            },
+            "source": "str('../../input/cars196/cars196')",
+            "root": "str('../../input/cars196/cars196')"
+        },
+        "sop": {
+            "source": "str('../datasets/SOP/Stanford_Online_Products')",
+            "root": "str('../datasets/SOP/Stanford_Online_Products')",
+            "classes": {
+                "train": "range(0, 11318)",
+                "eval": "range(11318, 22634)"
+            }
+        },
+        "inshop": {
+             "source": "str('../datasets/In_shop Clothes Retrieval Benchmark')",
+             "root": "str('../datasets/In_shop Clothes Retrieval Benchmark')",
+            "classes": {
+                "train": "range(0, 3997)",
+                "eval": "range(0, 3985)"
+            }
+        }
+    },
+     "transform_parameters": {
+        "rgb_to_bgr": "False", 
+        "intensity_scale": "[[0, 1], [0, 1]]",
+        "mean": "[0.485, 0.456, 0.406]",
+        "std": "[0.229, 0.224, 0.225]",
+        "sz_crop": "256",
+        "sz_resize": "288"
+    }
+}

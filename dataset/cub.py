@@ -1,0 +1,20 @@
+from .base import *
+import os
+
+class CUBirds(BaseDatasetMod):
+    def __init__(self, root, source, classes, transform = None):
+        BaseDatasetMod.__init__(self, root, source, classes, transform)
+        index = 0
+        for i in torchvision.datasets.ImageFolder(root =
+                os.path.join(root, 'images')).imgs:
+            # i[1]: label, i[0]: root
+            y = i[1]
+            # fn needed for removing non-images starting with `._`
+            fn = os.path.split(i[0])[1]
+            if y in self.classes and fn[:2] != '._':
+                self.ys += [y]
+                self.I += [index]
+                self.im_paths.append(i[0])
+                index += 1
+
+

@@ -1,0 +1,1 @@
+CUDA_VISIVBLE_DEVICES=0,1 python train.py --dataset cub --config config/cub.json --mode test --seed 0 --pt_path ./results/cub/cub_755_847_904_944.pt
